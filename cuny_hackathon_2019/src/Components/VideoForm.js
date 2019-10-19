@@ -9,12 +9,12 @@ class VideoForm extends Component {
   }
 
   handleImage = e => {
-    this.setState({ currentAudio: e.target.files[0],
-    currentAudioPath : e.target.value });
+    console.log(e.target.files[0])
+    this.setState({currentAudio: e.target.files[0]});
+    console.log(this.state.currentAudio)
+    this.props.addVideoURL(e.target.files[0]);
   };
   render() {
-    const { currentAudio, currentAudioPath } = this.state;
-    console.log(currentAudio, currentAudioPath);
     return (
       <div>
         <input
