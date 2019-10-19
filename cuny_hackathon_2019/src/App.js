@@ -1,27 +1,39 @@
 import React, { Component } from "react";
 import logo from "./logo.png";
 import "./App.css";
-import VideoRecorder from "react-video-recorder";
+
+
+// react components
+import VideoForm from './Components/VideoForm';
+import VideoList from './Components/VideoList';
+
+import {storage} from 'firebase';
 
 class App extends Component {
 
   componentWillMount(){
-    const uploadedVideos = localStorage.getItem("uploadedVideos");
-    
+    /* TODO */
   }
 
   constructor(props) {
     super(props);
     this.state = {
-      uploadedVideos: []
+      videoURLS: []
     };
   }
+
+  addVideoURL(url){
+    this.setState({videoURLS : [...this.state.videoURLS, url]});
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <span>Welcome To <img src={logo} className="App-logo" alt="logo" /></span>        
         </header>
+        <VideoForm/>
+        <VideoList />
       </div>
     );
   }
