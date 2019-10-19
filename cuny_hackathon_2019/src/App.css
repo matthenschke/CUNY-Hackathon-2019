@@ -3,9 +3,11 @@
 
 .App {
   text-align: center;
+  background-color : #ff00ff;
 }
 
 .App-logo {
+  width : 50x;
   height: 40vmin;
 }
 
