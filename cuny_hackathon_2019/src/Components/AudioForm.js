@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class VideoForm extends Component {
+class AudioForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,4 +34,4 @@ class VideoForm extends Component {
   }
 }
 
-export default VideoForm;
+export default AudioForm;
